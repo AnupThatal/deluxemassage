@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container" style="margin-top: 100px;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 style="text-align: center; font-weight: bold; margin-bottom: 20px;">Billing Information</h2>
+
+            {% for item in carts %}
+            <div class="card" style="margin-bottom: 15px;">
+                <div class="card-body">
+                    <p class="card-text" style="font-weight: bold;">REF: {{ item.id }}</p>
+                    <h5 class="card-title" style="font-weight: bold;">Title: {{ item.title }}</h5>
+                    <p class="card-text" style="font-weight: bold;">Price: {{ item.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div style="margin-top: 30px; display: flex; flex-direction: column;">
+                <p class="card-text" style="font-size:20px; margin-bottom: 10px; font-weight: bold; color: #333;">Total Therapy booked: {{ cart }}</p>
+                <p class="card-text" style="font-size:20px; font-weight: bold; color: #333;">Total Price: {{ total_p }}</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-6">
+           
+            <form method="post" action="{% url 'course_purchase_cart' %}">
+                {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name" style="color: rgb(80, 76, 76);font-weight: bold;">Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country" style="color: rgb(80, 76, 76);font-weight: bold;">Address</label>
+                        <input type="text" class="form-control" id="country" name="country" placeholder="Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Therapy_date" style="color: rgb(80, 76, 76);font-weight: bold;">Therapy Date:</label>
+                        <input type="date" class="form-control" id="Therapy_date" name="Therapy_date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" style="color: rgb(80, 76, 76);font-weight: bold;">Your Email:</label>
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact" style="color: rgb(80, 76, 76);font-weight: bold;">Your Phone Number:</label>
+                        <input type="tel" class="form-control" id="contact" name="contact" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment" style="color: rgb(80, 76, 76);font-weight: bold;">Payment Method:</label>
+                        <select class="form-control" id="payment" name="payment" required>
+                            <option value="esewa">Esewa</option>
+                            <option value="cod">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Specialrequest" style="color: rgb(80, 76, 76);font-weight: bold;">Any Special request</label>
+                        <textarea class="form-control" id="Specialrequest" name="Specialrequest" placeholder="Any special request"></textarea>
+                    </div>
+                    <input type="hidden" name="Therapy_name" value="{{ course.pk }}">
+                    <button type="submit" class="btn btn-primary btn-block" >Submit</button>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

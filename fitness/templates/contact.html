@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="single" style="margin-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="{{ expert.trainer_pic.url }}" alt="{{ expert.trainer_name }} Profile Picture" class="img-fluid mb-4" style="max-height: 300px; width: 100%;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="expert-details">
+                    <h2>{{ expert.trainer_name }}</h2>
+                    <p><strong>Expertise:</strong> {{ expert.expertise }}</p>
+                    <p><strong>Country:</strong> {{ expert.country }}</p>
+                    <p><strong>City:</strong> {{ expert.city }}</p>
+                    <p><strong>Location:</strong> {{ expert.location }}</p>
+                    <a class="btn btn-info btn-lg mt-3" href="#">Book Now</a>
+                </div>
+            </div>
+            <div class="col-8 mt-4">
+                <div class="text-center">
+                    <p style="font-weight: bold;font-size:50px;color:rgb(109, 237, 214);">Booking form</p>
+                    <form method="post" action="{% url 'contact' id=expert.id %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="user_name">Your Name:</label>
+                            <input type="text" class="form-control" id="user_name" name="user_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">Your Email:</label>
+                            <input type="email" class="form-control" id="user_email" name="user_email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">Your Email:</label>
+                            <input type="date" class="form-control" id="user_date" name="user_date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_contact">Your Contact:</label>
+                            <input type="text" class="form-control" id="user_contact" name="user_contact" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

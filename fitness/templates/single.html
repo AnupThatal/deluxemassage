@@ -1,0 +1,97 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}     
+
+
+        <!-- Page Header Start -->
+        <div>
+            <div class="container">
+                <!-- <div class="row">
+                    <div class="col-12">
+                        <h2>Detail Page</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Detail Page</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Single Post Start-->
+        <div class="single" style="margin-top: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="single-content wow fadeInUp">
+                            <img src="{{ blog.main_pic1.url }}" /> <!-- Assuming main_pic1 is the field for the main image -->
+                            <h2>{{ blog.title }}</h2>
+                            <p>{{ blog.content }}</p>
+                            <p>{{ blog.important_notes }}</p>
+                            <!-- Add more dynamic content as needed -->
+                        </div>
+                        <div class="single-bio wow fadeInUp">
+                            <div class="single-bio-img">
+                                <img src="img/user.jpg" />
+                            </div>
+                            <div class="single-bio-text">
+                                <h3>{{ blog.username }}</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst.
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <div class="sidebar-widget wow fadeInUp">
+                                <div class="search-widget">
+                                    <form>
+                                        <input class="form-control" type="text" placeholder="Search Keyword">
+                                        <button class="btn"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-widget wow fadeInUp">
+                                <h2 class="widget-title">Recent Post</h2>
+                                <div class="recent-post">
+                                    {% for i in latest %}
+                                    <div class="post-item">
+                                        <div class="post-img">
+                                            <img src="{{ i.main_pic1.url }}" />
+                                        </div>
+                                        <div class="post-text">
+                                            <a href="">{{i.title}}</a>
+                                            <div class="post-meta">
+                                                <p>By<a href="">{{i.username}}</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                           
+
+                            <div class="sidebar-widget wow fadeInUp">
+                               </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Post End-->   
+
+
+        <!-- Footer Start -->
+       {% endblock %}

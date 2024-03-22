@@ -1,0 +1,28 @@
+
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 150px;">
+    <div class="row">
+        <div class="col-md-12">
+        
+        <div  style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom:100px;">
+            <p style="font-weight: bold;font-size:20px;"> Thank you, Your Booking is confirm Check your mail </p>
+           <a class="btn btn-info" style="color: white;" href="{% url 'service' %}"> Book More Therapy</a>
+        </div>
+        
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

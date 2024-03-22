@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="single" style="margin-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ course.file_mainpic.url }}" alt="{{ course.course_name }} Picture" class="img-fluid mb-4" style="max-height: 500px; width: 100%;">
+            </div>
+            <div class="col-md-6">
+                <div class="expert-details">
+                    <h2>{{ course.title }}</h2>
+                    <p><strong>Trainer:</strong> {{ course.trainer_name.name }}</p>
+                    <p><strong>Title:</strong> </p>
+                    <p><strong>Price:</strong> {{ course.price }}</p>
+                    <p><strong>Important Notes:</strong> {{ course.important_notes }}</p>
+                    <a href="{% url 'course_purchase' pk=course.pk %}" class="btn btn-primary">Book Now</a>
+                  
+                    <a href="{% url 'add_cart' pk=course.pk %}" class="btn btn-success">Add to cart</a>
+
+
+                </div>
+            </div>
+
+            <div class="col-12">
+                <p><strong>Description:</strong> {{ course.Description }}</p>
+                <div class="col-12">
+                    <div style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;">
+                        <img src="{{ course.pic1.url }}" alt="{{ course.course_name }} Picture" class="mb-4 centered-image" style="max-width: 45%; height: auto;">
+                        <img src="{{ course.pic2.url }}" alt="{{ course.course_name }} Picture" class="mb-4 centered-image" style="max-width: 45%; height: auto;">
+                    </div>
+                </div>
+                <p><strong>Quotes:</strong> {{ course.quotes }}</p>
+                <p><strong>Important Notes:</strong> {{ course.important_notes }}</p>
+            </div>
+
+            <div class="col-12" style="text-align: justify;">
+                {% if course.desc %}
+                <p style="font-family: sans-serif;">{{ course.desc }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

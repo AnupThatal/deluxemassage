@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Nav Bar End -->
+
+
+        <!-- Page Header Start -->
+        <div>
+            <div class="container" style="margin-top: 50px;">
+                <div class="row">
+                    <!-- <div class="col-12">
+                        <h2>Trainer</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Trainer</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Yoga Trainer</p>
+                    <h2>Expert Yoga Trainer</h2>
+                </div>
+                <div class="row">
+                    {% for teacher in teacher_all %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{{ teacher.trainer_pic.url }}" alt="Image" width="200px" height="200px">
+                                <div class="team-social">
+                                    <!-- Add links to social media if available -->
+                                </div>
+                            </div>
+                            <div class="team-text" style="display: flex;flex-direction:column;gap:10px">
+                                <p style="font-weight: bold;">{{ teacher.trainer_name }}</p>
+                                <p style="font-weight: bold;">{{ teacher.expertise }}</p>
+                                <a href="{% url 'therapist_details' id=teacher.id %}" class="btn btn-info" style="text-transform:capitalize;">Details</a>
+
+                                <!-- You can display other details here like country, city, location, contact, etc. -->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team End -->
+
+
+        <!-- Footer Start -->
+        {% endblock %}

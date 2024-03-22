@@ -1,0 +1,465 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DELUXE MASSAGE</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet"> 
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="far fa-clock"></i>
+                                <h2>24/7</h2>
+                                <p>Sunday - Saturday    </p>
+                            </div>
+                            <div class="text">
+                                <!-- <i class="fa fa-phone-alt"></i> -->
+                                <!-- <h2>+123 456 7890</h2>
+                                <p>For Appointment</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <!-- <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a href="{% url 'home' %}" class="navbar-brand">D<span>elu</span>XE</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{% url 'home' %}" class="nav-item nav-link active" style="color: black;font-weight: bold;">Home</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link" style="color: black;font-weight: bold;">About</a>
+                        <a href="{% url 'service' %}" class="nav-item nav-link" style="color: black;font-weight: bold;">Service</a>
+                        <a href="{% url 'therapist' %}" class="nav-item nav-link" style="color: black;font-weight: bold;">Trainer</a>
+                        <a href="{% url 'blogs' %}" class="nav-item nav-link" style="color: black;font-weight: bold;">Blog</a>
+                        <a href="{% url 'view_cart' %}" class="btn btn-info btn-block nav-item nav-link" style="color: black;font-weight: bold;">Cart</a>
+                        <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+{% block content %}
+        <!-- Nav Bar End -->
+
+        <!-- Hero Start -->
+       <!-- Jumbotron -->
+       <div class="hero" style="background-color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image on the left -->
+            <div class="col-md-8">
+            <div class="p-5 text-center bg-image rounded-3" style="
+                background-image:url('static/img/hero.jpg');
+                background-size: cover;
+                background-position: center;
+                height: 600px;
+                margin-top: -12px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 5px solid #fff; /* Add border */
+                padding: 20px; /* Add padding */
+                border-radius: 20px; /* Add border radius */
+                 padding: 20px; /* Add padding */
+            ">
+            </div>
+                </div>
+                <div class="col-md-4">
+                <div class="mask" style="background-color: rgba(70, 67, 67, 0.6); border-radius: 10px;padding: 20px;height:600px;">
+                    <h4 style="color: rgb(204, 217, 189); font-weight: bold;text-align: center;">MOBILE MASSAGE</h4>
+                    <h2 style="color: white; font-weight: bold;">DELUXE MASSAGE THERAPY AT YOUR HOME, OFFICE OR HOTEL</h2>
+                    <div style="margin-top: 20px;">
+                        <h4 class="text-white font-weight-bold mb-4">Service Locations</h4>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-center">
+                                <h5 class="font-weight-bold text-white mr-2">1)</h5>
+                                <h5 class="font-weight-bold text-white">Kathmandu</h5>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <h5 class="font-weight-bold text-white mr-2">2)</h5>
+                                <h5 class="font-weight-bold text-white">Butwal</h5>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <h5 class="font-weight-bold text-white mr-2">3)</h5>
+                                <h5 class="font-weight-bold text-white">Dharan</h5>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <h5 class="font-weight-bold text-white mr-2">4)</h5>
+                                <h5 class="font-weight-bold text-white">Pokhara</h5>
+                            </li>
+                        </ul>
+                        
+                        <p class="text-white mb-0">We offer mobile massage therapist 24/7</p>
+                    </div>
+                    
+                    <div style="margin-top: 20px;display: flex;justify-content: center;gap:10px">
+                        <a class="btn btn-outline-light" href="https://wa.me/9779869111406" role="button" style="background-color: rgb(86, 190, 124); width: 300px; font-weight: bold;text-align:center;">Chat On WhatsApp</a>
+                        <a class="btn btn-outline-light" href="{% url 'therapist' %}" role="button" style="width: 300px; font-weight: bold;">Catch up the therapist</a>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <p style="color: white; font-weight: bold;text-align: center;">PRE PAYMENT REQUIRED</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!-- Jumbotron -->
+
+
+        <!-- Hero End -->
+
+
+        <!-- About Start -->
+        <!-- <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="{% static 'img/about.png' %}" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h2>Welcome to Yooga</h2>
+                        </div>
+                        <div class="about-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.
+                            </p>
+                            <a class="btn" href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+      
+        <!-- Service End -->
+
+
+        <!-- Class Start -->
+        <div class="class">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Our Classes</p>
+                    <h2>Yoga Class Schedule</h2>
+                </div>
+                <div class="row class-container">
+                    {% for course in courses %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="class-wrap">
+                            <img src="{{ course.file_mainpic.url }}" alt="Image" class="img-fluid">
+                            <div class="class-text">
+                                <h2>{{ course.title }}</h2>
+                                <h2>Trainer: {{ course.user }}</h2>
+                                <p>{{ course.Description|truncatewords:20 }}</p>
+                                <p>Price: {{ course.price }}</p>
+                                <a href="{% url 'classes_details' id=course.id %}" class="btn btn-primary">View Details</a>
+                                <a href="{% url 'add_cart' pk=course.id %}" class="btn btn-success">Add to cart</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <a class="btn btn-success" style="color: white;" href="{% url 'service' %}">Explore More Classes</a>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+    
+        <!-- Class End -->
+        
+        
+        <!-- Discount Start -->
+        <!-- <div class="discount wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Awesome Discount</p>
+                    <h2>Get <span>30%</span> Discount for all Classes</h2>
+                </div>
+                <div class="container discount-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                    </p>
+                    <a class="btn">Join Now</a>
+                </div>
+            </div>
+        </div> -->
+        <!-- Discount End -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Yoga Trainer</p>
+                    <h2>Expert Yoga Trainer</h2>
+                </div>
+                <div class="row">
+                    {% for teacher in teacher_all %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="{{ teacher.trainer_pic.url }}" alt="Image" width="200px" height="200px">
+                                <div class="team-social">
+                                    <!-- Add links to social media if available -->
+                                </div>
+                            </div>
+                            <div class="team-text" style="display: flex;flex-direction:column;gap:10px">
+                                <p style="font-weight: bold;">{{ teacher.trainer_name }}</p>
+                                <p style="font-weight: bold;">{{ teacher.expertise }}</p>
+                                <a href="{% url 'therapist_details' id=teacher.id %}" class="btn btn-info" style="text-transform:capitalize;">Details</a>
+
+                                <!-- You can display other details here like country, city, location, contact, etc. -->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                    <a class="btn btn-success" style="color: white;" href="{% url 'therapist' %}">Explore More Therapist</a>
+                </div>
+            </div>
+        </div>
+                
+        <div class="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p style="font-weight: bold;">Welcome to our</p>
+                    <h3 style="font-weight: bold;">Mobile Massage Nepal Therapy Service Center
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">  
+                            <div class="service-icon">
+                                <i class="flaticon-workout"></i>
+                            </div>
+                            <h3>Heal emotions</h3>
+                            <p>
+                                To keep the body in good health is a duty otherwise we shall not be able to keep our mind strong and clear.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item active">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-1"></i>
+                            </div>
+                            <h3>Body Refreshes</h3>
+                            <p>
+
+                                Don't ask yourself what the world needs, ask yourself what makes you come alive. And then go and do that.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-2"></i>
+                            </div>
+                            <h3>Mind & Serenity</h3>
+                            <p>
+                                Emotional health is not just the absence of mental illness, but it is also the ability to cope
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-3"></i>
+                            </div>
+                            <h3>Enjoy Your life</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                            </p>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-4"></i>
+                            </div>
+                            <h3>Body & Spirituality</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                            </p>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-yoga-pose"></i>
+                            </div>
+                            <h3>Body & Mind</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- Price Start -->
+      
+        <!-- Price End -->
+        
+        
+        <!-- Testimonial Start -->
+    
+        <!-- Testimonial End -->
+
+
+
+        <!-- Blog Start -->
+                <div class="blog">
+                    <div class="container">
+                        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                            <p>From Blog</p>
+                            <h2>Latest Yoga Articles</h2>
+                        </div>
+                        <div class="row blog-page">
+                            <!-- Loop through all blog articles -->
+                            {% for single_blog in latest_blog %}
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                        <img src="{{ single_blog.main_pic1.url }}" height="200px" width="200px">
+                
+                                    </div>
+                                    <div class="blog-text">
+                                        <h2>{{ single_blog.title }}</h2>
+                                        <div class="blog-meta">
+                                            <p><i class="far fa-list-alt"></i>{{ single_blog.category }}</p>
+                                            <p><i class="far fa-calendar-alt"></i>{{ single_blog.Date }}</p>
+                                            <!-- Add more meta data fields here as needed -->
+                                        </div>
+                                        <p style="text-align: justify;">{{ single_blog.content|truncatewords_html:20 }}</p>
+                                    <!-- Add read more link -->
+                                    <a class="btn" href="{% url 'blog_details' text=single_blog.title %}">Read More <i class="fa fa-angle-right"></i></a>
+                
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                            <a class="btn btn-success" style="color: white;" href="{% url 'blogs' %}">Explore more blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+        {% endblock %}
+        <!-- <a href="https://wa.me/9779869111406?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">WhatsApp</a> -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <a href="{% url 'home' %}" class="footer-logo">D<span>elu</span>XE</a>
+                        <h3>Kathmandu,Nepal</h3>
+                        <div class="footer-menu">
+                            <p>+9779869111406</p>
+                            <p>info@example.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Designed By <a href="">Anup Thatal</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

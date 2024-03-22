@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="single" style="margin-top: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <img src="{{ expert.trainer_pic.url }}" alt="{{ expert.trainer_name }} Profile Picture" class="img-fluid mb-4" style="max-height: 300px; width: 100%;">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="expert-details">
+                    <h2>{{ expert.trainer_name }}</h2>
+                    <p><strong>Expertise:</strong> {{ expert.expertise }}</p>
+                    <p><strong>Country:</strong> {{ expert.country }}</p>
+                    <p><strong>City:</strong> {{ expert.city }}</p>
+                    <p><strong>Location:</strong> {{ expert.location }}</p>
+                    <!-- <a class="btn btn-info" href="{% url 'contact' id=expert.id %}">Book now for {{ expert.expertise }} </a> -->
+
+
+                    <!-- <p><strong>Contact:</strong> {{ expert.contact }}</p> -->
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="text-center">
+                    {% if expert.desc %}
+                    <p style="font-family: sans-serif;">{{ expert.desc }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
